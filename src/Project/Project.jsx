@@ -1,20 +1,26 @@
+// Import dependencies
 import './Project.css';
 
-function Project({ title, image, deployedLink, githubLink, description}) {
+function Project({ title, image, deployedUrl, githubUrl, description }) {
     return (
         <div className="project-card">
             <div className="project-image">
                 <img src={image} alt={title} />
-                <div  className="project-overlay">
+                {/* Overlay div for hover effects */}
+                <div className="project-overlay">
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <div className="project-links">
-                    <a href={deployedLink} target="_blank" rel="noopener noreferrer">Live Site</a>
-                    <a href={githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href={deployedUrl} target="_blank" rel="noopener noreferrer">
+                            Live Demo
+                        </a>
+                        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                            GitHub Repo
+                        </a>
                     </div>
-                    </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
